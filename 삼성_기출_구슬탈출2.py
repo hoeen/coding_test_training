@@ -3,77 +3,75 @@
 # BFS - queue, DFS - stack (재귀)
 # 일단, 빨간구슬이 구멍에 들어갈때까지를 구현
 
-n, m = map(int, input().split(' '))
+### 풀이 
+# https://jeongchul.tistory.com/665
+## 유형 좀 익힌다음 다시 풀어보기!
 
-# map 입력받기
-board = []
-for i in range(n):
-    board.append(list(input()))
+from sys import stdin
+from collections import deque
 
-# dfs 구현하는데 한번에 가로 세로 끝으로 가야함
-# 먼저 R,B 위치파악
-def find_marble(board):
-    marble_loc = {'R':None, 'B':None}
-    for row in range(len(board)):
-        for col in range(len(row)):
-            if board[row][col] == 'R':
-                marble_loc['R'] = (row,col)
-            if board[row][col] == 'B':
-                marble_loc['B'] = (row,col)
-    return marble_loc
+input = stdin.readline
+n, m = map(int, input().split())
+board = [list(input().strip()) for _ in range(n)]
 
-# 이동 함수 (상,하,좌,우 - 한방향으로 못갈때까지 움직임)
-def move(x,y, way=None):
-    if way == 'up':
-        while board[x][y] != '#':
-            x -= 1
-            if board[x][y] == '#'
-                x += 1
-                
-    elif way == 'down':
-        while board[x][y] != '#':
-            x += 1
-            if board[x][y] == '#'
-                x -= 1
-    elif way == 'left':
-        while board[x][y] != '#':
-            y -= 1
-            if board[x][y] == '#'
-                y += 1
-    else: #right
-        while board[x][y] != '#':
-            y += 1
-            if board[x][y] == '#'
-                y -= 1
+visited = [[[[False]*m for _ in range(n)] for _ in range(m)] for _ in range(n)]
+# visited for [rx][ry][bx][by]  - 두개의 구슬의 x,y동시 체크해야 하므로 4차원으로 선언
 
-    return x,y
+dx, dy = (-1,0,1,0), (0,1,0,-1)
+q = deque()
 
-# 이제 이동해서 구슬을 구멍에 넣자
-rx, ry = find_marble(board)['R']
-bx, by = find_marble(board)['B']
+def init():   # 시작노드 설정
+    rx, ry, bx, by = [0]*4 # 0으로 초기화
+    for i in range(n):
+        for j in range(m):
+            if board[i][j] == 'R':
+                rx, ry = i, j
+            elif board[i][j] == 'B':
+                bx, by = i, j
+    print(rx, ry, bx, by)
+    q.append((rx, ry, bx, by, 1))
+    visited[rx][ry][bx][by] = True # 시작노드 방문처리
 
-while board[rx][ry] != 'O':
-    move(rx, ry, 'up')
-    move(rx, ry, 'down')
-    move(rx, ry, 'left')
-    move(rx, ry, 'right')
-
-    
-# 유형 해법을 좀 익혀야겠다. 방향을 너무 모르겠다 ㅜ
-
-반복문 구현?
-while 10번 이하:
-    move() 
+# 움직임 구현
+def move(x, y, dx, dy):
+    count = 0 # 이동한 칸수
+    # 다음 이동이 벽이거나 구멍일 때까지
+    while board[x+dx][y+dy] != '#' and board[x][y] != 'O':
+        x += dx
+        y += dy
+        count += 1
+    return x, y, count
 
 
-def move():
-    while n <= 10:
-        move(up)
-        
-        move(down)
-        
-        move(left)
-        
-        move(right)
+# bfs 탐색
+def bfs():
+    init()
+    while q: # BFS -> queue, while
+        rx, ry, bx, by, depth = q.popleft()
+        if depth > 10:
+            break
+        for i in range(len(dx)):
+            next_rx, next_ry, r_count = move(rx, ry, dx[i], dy[i])
+            next_bx, next_by, b_count = move(bx, by, dx[i], dy[i])
 
-    return
+            if board[next_bx][next_by] == 'O':
+                continue
+            if board[next_rx][next_ry] == 'O':
+                print(1)
+                return
+            # 동시에 같은 칸으로 갈 경우, 많이 움직인것이 뒤로 한칸 가면 된다.
+            if next_rx == next_bx and next_ry == next_by:
+                if r_count > b_count:
+                    next_rx -= dx[i]
+                    next_ry -= dy[i]
+                else:
+                    next_bx -= dx[i]
+                    next_by -= dy[i]
+
+            # BFS 탐색을 마치고, 방문 여부 확인
+            if not visited[next_rx][next_ry][next_bx][next_by]:
+                visited[next_rx][next_ry][next_bx][next_by] = True
+                q.append((next_rx, next_ry, next_bx, next_by, depth + 1))
+    print(0)
+
+bfs()
