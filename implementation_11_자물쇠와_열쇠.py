@@ -48,20 +48,21 @@ def check(dx,dy):
     # x, y 겹치는지 확인 - lock에 빈데가 있으면 다시 진행
     for x in range(dx, len(key)+dx):
         for y in range(dy, len(key)+dy):
-            pos = (x,y)
-            for lx in range(m-1, m-1+len(lock)):
-                for ly in range(m-1, m-1+len(lock)):
-                    lpos = (lx, ly)
-                    # 겹치는 좌표 찾으면 - 0,1 반대되는지 확인
-                    if lpos == pos:
+            # pos = (x,y)
+            # for lx in range(m-1, m-1+len(lock)):
+            #     for ly in range(m-1, m-1+len(lock)):
+            #         # lpos = (lx, ly)
+            #         # 겹치는 좌표 찾으면 - 0,1 반대되는지 확인
+            #         if lpos == pos:
                         
-                        # key가 1, lock이 0이면 lock 을 1로 바꿈 (채우기)
-                        if key_map[x][y] == 1 and lock_map[lx][ly] == 0:
-                            lock_map[lx][ly] = 1
+            #             # key가 1, lock이 0이면 lock 을 1로 바꿈 (채우기)
+            #             if key_map[x][y] == 1 and lock_map[lx][ly] == 0:
+            #                 lock_map[lx][ly] = 1
                         
-                        elif key_map[x][y] == lock_map[lx][ly]: # 둘이 같은 경우 
-                            return False # 키 안맞으므로 다시 move 해야함.
-
+            #             elif key_map[x][y] == lock_map[lx][ly]: # 둘이 같은 경우 
+            #                 return False # 키 안맞으므로 다시 move 해야함.
+            lock_map[x][y] += key_map[x][y]
+            
     # return 없이 겹치는부분을 채운경우 - 전체 lock이 1인지 확인
     for lx in range(m-1, m-1+len(lock)):
         for ly in range(m-1, m-1+len(lock)):

@@ -16,18 +16,35 @@ import sys
 input = sys.stdin.readline
 
 # r,c 보드 크기, 조사하는 온도 K
-r,c,k = map(int, input().split()) 
+# r,c,k = map(int, input().split()) 
 
 # 방 정보 기입
-room = []
-for _ in range(r):
-    room.append(list(map(int, input().split())))
+# room = []
+# for _ in range(r):
+#     room.append(list(map(int, input().split())))
 
-# 벽 개수
-w = int(input())
-wall = []
-for _ in range(w):
-    wall.append(tuple(map(int, input().split())))
+# # 벽 개수
+# w = int(input())
+# wall = []
+# for _ in range(w):
+#     wall.append(tuple(map(int, input().split())))
+
+
+r,c,k = 7,8,100
+room = [ 
+    [0,0,0,0,0,0,5,0],
+    [5,4,4,4,4,4,4,0],
+    [0]*8,
+    [0,0,5,5,0,0,0,0],
+    [0,0,0,0,0,5,0,0],
+    [5,0,0,0,0,0,5,0],
+    [0,0,0,0,3,0,0,0],
+]
+
+w = 3
+wall = [(4,4,1),
+(5,4,0),
+(5,6,0)]
 
 # wall 좌표에 맞게 바꾸기
 wall = [(wa[0]-1, wa[1]-1, wa[2]) for wa in wall]
@@ -233,6 +250,7 @@ while True:
         print(101)
         break
 
-
+for ro in room:
+    print(ro)
 
 
