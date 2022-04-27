@@ -145,14 +145,14 @@ for _ in range(s):
     # 원래 상태 저장
     orgFish = [f for f in fish]
     fish_move()
-    print('fish move:')
-    for f in sorted(fish):
-        print(f)
+    # print('fish move:')
+    # for f in sorted(fish):
+    #     print(f)
 
     shark_path(sx,sy,[(sx,sy)],0,[])
     shark_move()
 
-    print('path:',path)
+    # print('path:',path)
 
     # blood 없애기
     rm_stage = stage - 2
@@ -163,15 +163,15 @@ for _ in range(s):
     ### 3. 복제 
     for orf in orgFish:
         fish.append(orf)
-    print('stage:', stage)
-    print('fish:')
-    for f in sorted(fish):
-        print(f)
-    print('blood:', blood)
-    print('shark:', (sx,sy))
+    # print('stage:', stage)
+    # print('fish:')
+    # for f in sorted(fish):
+    #     print(f)
+    # print('blood:', blood)
+    # print('shark:', (sx,sy))
     stage += 1
 
-    print('='*30)
+    # print('='*30)
 print(len(fish))
 
 
