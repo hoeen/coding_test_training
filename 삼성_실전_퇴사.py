@@ -4,11 +4,11 @@ N일동안 최대한많은 상담.
 하루에 하나씩 다른사람 상담. 소요기간 Ti, 받는금액 Pi
 상담 했을때, 최대수익 구하라.
 '''
-n = int(input())
+# n = int(input())
 
-cons_list = []
-for _ in range(n):
-    cons_list.append(list(map(int, input().split())))
+# cons_list = []
+# for _ in range(n):
+#     cons_list.append(list(map(int, input().split())))
 
 # # 예시 1
 # n = 7
@@ -97,11 +97,11 @@ for _ in range(n):
 # ]
 
 # 만든 예시 4
-# n = 2
-# cons_list = [
-#     [3,1],
-#     [1,1]
-# ]
+n = 2
+cons_list = [
+    [3,1],
+    [1,1]
+]
 
 money_cand = []
 def max_price(k, earned):  # 처음에 k = 0, earned = 0, date =[]

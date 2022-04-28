@@ -13,27 +13,28 @@
 4. 세번째 연습에서는, 첫번째에 생긴 냄새가 없어진다. 
 S번의 연습을 마친 후 격자에 있는 물고기의 수를 출력한다.
 '''
-
+import time
+t0 = time.time()
 # 물고기수 m, 연습횟수 s
-m, s = map(int, input().split())
+# m, s = map(int, input().split())
 
-fish = []
-for _ in range(m):
-    fish.append(tuple(map(int, input().split())))
+# fish = []
+# for _ in range(m):
+#     fish.append(tuple(map(int, input().split())))
 
-# fish = [ 
-#     (4, 3, 5),
-#     (1 ,3 ,5),
-#     (2 ,4, 2),
-#     (2 ,1, 6),
-#     (3 ,4, 4),
-# ]
+m, s = 5, 26
+fish = [ (4, 3, 5),
+(1, 3, 5),
+(2, 4, 2),
+(2, 1, 6),
+(3, 4, 4) ]
+sx, sy = 4, 2
 
 
 
 
 # 상어 처음위치
-sx, sy = map(int, input().split())
+# sx, sy = map(int, input().split())
 
 
 ########
@@ -136,6 +137,7 @@ def shark_move(): # path 따라 이동하고, 물고기 먹고, 피 남긴다
 
 ### 시뮬레이션 실행 및 최종 물고기 수 출력
 ## test
+print('start')
 stage = 0
 blood = []
 for _ in range(s):
@@ -175,7 +177,7 @@ for _ in range(s):
 print(len(fish))
 
 
-        
+print(time.time() - t0)
 
     
     
