@@ -79,7 +79,8 @@ def wind_dfs(x,y,d,length,visited):  #length = 0
             visited[x][y] = True
             # 벽 조건 걸기
             if (x+1,y,1) not in wall and (x+1,y,0) not in wall:
-                wind_dfs(x+1, y+1, d, length+1,visited)
+                wind_dfs(x+1,
+                 y+1, d, length+1,visited)
             if (x, y, 1) not in wall:
                 wind_dfs(x,y+1, d, length+1,visited)
             if (x, y, 0) not in wall and (x-1,y,1) not in wall:

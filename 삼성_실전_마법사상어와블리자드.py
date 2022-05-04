@@ -38,20 +38,61 @@
 
 
 # 예제 2
+n, m = 7, 4
+board = [
+[0, 0, 0, 2, 3, 2, 3],
+[1, 2, 3, 1, 2, 3, 1],
+[2, 3, 1, 2, 3, 1, 2],
+[1, 2, 3, 0, 2, 3, 1],
+[2, 3, 1, 2, 3, 1, 2],
+[3, 1, 2, 3, 1, 2, 3],
+[1, 2, 3, 1, 2, 3, 1],
+]
+magic = [
+    (1, 3),
+    (2, 2),
+    (3, 1),
+    (4, 3),
+]
+
+# 예제 3
 # n, m = 7, 4
 # board = [
-# 0 0 0 2 3 2 3
-# 1 2 3 1 2 3 1
-# 2 3 1 2 3 1 2
-# 1 2 3 0 2 3 1
-# 2 3 1 2 3 1 2
-# 3 1 2 3 1 2 3
-# 1 2 3 1 2 3 1
+# [1, 1, 1, 2, 2, 2, 3],
+# [1, 2, 2, 1, 2, 2, 3],
+# [1, 3, 3, 2, 3, 1, 2],
+# [1, 2, 2, 0, 3, 2, 2],
+# [3, 1, 2, 2, 3, 2, 2],
+# [3, 1, 2, 1, 1, 2, 1],
+# [3, 1, 2, 2, 2, 1, 1],
 # ]
-# 1 3
-# 2 2
-# 3 1
-# 4 3
+# magic = [
+#     (1, 3),
+#     (2, 2),
+#     (3, 1),
+#     (4, 3),
+# ]
+
+# 예제 4
+# n, m = 7, 7
+# board = [
+# [1, 1, 1, 2, 2, 2, 3],
+# [1, 2, 2, 1, 2, 2, 3],
+# [1, 3, 3, 2, 3, 1, 2],
+# [1, 2, 2, 0, 3, 2, 2],
+# [3, 1, 2, 2, 3, 2, 2],
+# [3, 1, 2, 1, 1, 2, 1],
+# [3, 1, 2, 2, 2, 1, 1],
+# ]
+# magic = [
+#     (1, 3),
+#     (2, 2),
+#     (3, 1),
+#     (4, 3),
+#     (1, 3),
+#     (1, 1),
+#     (1, 3)
+# ]
 
 # 1. 미로를 일렬로 펼치는 기능 구현
 
@@ -98,8 +139,7 @@ def bliz():
             board[sx+i*bx[di]][sy+i*by[di]] = 0 # 파괴.
             
 
-# for bo in board:
-#     print(bo)
+
         
 
 # 3. 모이고, 폭발을 반복하여 수행불가까지 실행 
@@ -191,22 +231,29 @@ def fold(input_list):
 
 
 marble = {1:0, 2:0, 3:0}
-for _ in range(m):
+for m1 in range(m):
     bliz()
+    print('blizz:', m1)
+    for bo in board:
+        print(bo)
     st = stretch()
+    
 
     
 
     st = gather_and_explode()
+    print('exploded:')
+    for bo in board:
+        print(bo)
 
     marb_changed = change_marble()
     # print('marb change')
     # print(marb_changed)
 
     result = fold(marb_changed)
-    # print('result:')
-    # for res in result:
-    #     print(res)
+    print('result:')
+    for res in result:
+        print(res)
         
     board = [b[:] for b in result]
 

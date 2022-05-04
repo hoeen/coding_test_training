@@ -113,9 +113,9 @@ def dfs(fish, sx, sy, belly):
             # for f in fish:
             #     print(f)
 
-            # new_fish = [f[:] for f in fish]
+            new_fish = [f[:] for f in fish]
             # print('new_fish', new_fish)
-            # print(id(fish[0][0]), id(new_fish[0][0]))
+            print(id(fish[0][0]), id(new_fish[0][0]))
             # dfs(new_fish, snx, sny, belly_after)
             dfs(copy.deepcopy(fish), snx, sny, belly_after)
             
