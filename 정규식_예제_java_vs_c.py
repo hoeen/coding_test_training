@@ -15,7 +15,7 @@ def answer():
         return
     elif re.search('_',text):
         # _소문자 -> 대문자
-        newtext = re.sub('_([a-z])', lambda x: x.group(1).upper(),text)
+        newtext = re.sub('_[a-z]', lambda x: x.group(1).upper(),text)
     elif re.search('[A-Z]',text):
         # 대문자 -> _소문자
         newtext = re.sub('[A-Z]', lambda x: '_'+x.group(0).lower(), text)
