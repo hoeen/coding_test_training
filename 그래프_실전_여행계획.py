@@ -1,7 +1,7 @@
 def find_parent(parent, x):
     if parent[x] != x:
         parent[x] = find_parent(parent, parent[x])
-        return parent[x]
+    return parent[x]
 
 def union_parent(parent, a, b):
     a = find_parent(parent, a)
@@ -22,13 +22,40 @@ def union_parent(parent, a, b):
 '''
 n, m = map(int, input().split())
 
-# 행렬을 그래프로 넣기
+# 같은 트리에 속하는지만 확인하면 되므로, 
+# union 함수 수행한 뒤 부모 같은지만 확인하자.
+parent = list(range(n+1)) # 0~n
+
 graph = [[] for _ in range(n+1)]
 for i in range(n): # 0~ n-1
     row = list(map(int, input().split()))
     for j in range(n):
         if row[j] == 1:
-            graph[i+1].append(j+1)
+            union_parent(parent, i+1, j+1)
+
+plan = list(map(int, input().split()))
+
+result = True
+for i in range(len((plan))):
+    if i == 0:
+        par = parent[plan[i]]
+    else:
+        if parent[plan[i]] != par:
+            result = False
+
+if result:
+    print('YES')
+else:
+    print('NO')
+
+
+
+
+
+
+
+
+
 
 
 
