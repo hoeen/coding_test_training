@@ -1,4 +1,4 @@
-# ~2:00
+## ~2:00
 def binary_search(array, start, end):
     if start > end:
         return -1
