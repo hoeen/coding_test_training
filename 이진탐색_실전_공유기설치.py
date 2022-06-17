@@ -1,4 +1,4 @@
-## ~2:30
+# ~2:30
 n, c = map(int, input().split())
 
 array = []
