@@ -4,7 +4,7 @@
 | 00  | 취코테| 모험가 길드 | 그리디 |  ✅❗️     |        |        | 바로가기 |
 '''
 import os
-
+import unicodedata      # 한글 string의 길이를 다르게 인식하는 경우가 있어, unicodedata 패키지를 이용해 통일
 
 # # 기존 py 리스트 저장
 # files = []
@@ -70,7 +70,6 @@ def readme_list_insert(dfiles):
             if ref not in refnew_list:
                 refnew_list[ref] = []  
             refnew_list[ref].append(new_file)
-            print('refnew_list added:', refnew_list)
             continue # 신규 구분일 경우 다음 차례로 넘김
         
 
@@ -91,18 +90,10 @@ def readme_list_insert(dfiles):
             
 
             if multi and len(refline) > 3:
-                print(refline[3], '====', name)
-                print(len(refline[3]), len(name))
-                if len(refline[3]) == len(name):
-                    print('same length')
-                    print(refline[3], name)
-                    print(refline[3].encode(), name.encode())
 
-                if refline[3] == name: # 이미 푼 문제인 경우 - 같은 이름 찾아 회차 추가
-                    print('go')
-                    print(refline)
+                if unicodedata.normalize('NFC',refline[3]) == unicodedata.normalize('NFC',name): # 이미 푼 문제인 경우 - 같은 이름 찾아 회차 추가
                     mark_trial = '✅'
-                    if trial.endswith('ans'):
+                    if unicodedata.normalize('NFC',trial).endswith('답'):
                         mark_trial = '✅❗️'
                     if trial.startswith('2'): 
                         refline[5] = mark_trial
@@ -125,7 +116,7 @@ def readme_list_insert(dfiles):
                 '|' not in readme_list[i+1] and ref not in readme_list[i+1]:
 
                 mark_trial = '✅'
-                if trial.endswith('ans'):
+                if unicodedata.normalize('NFC',trial).endswith('답'):
                     mark_trial = '✅❗️'
 
                 readme_list.insert(i+1, 
@@ -140,7 +131,7 @@ def readme_list_insert(dfiles):
                 '|' in readme_list[i] and ref in readme_list[i]:
 
                 mark_trial = '✅'
-                if trial.endswith('ans'):
+                if unicodedata.normalize('NFC',trial).endswith('답'):
                     mark_trial = '✅❗️'
 
                 readme_list.append(   # 마지막에 append
@@ -158,7 +149,7 @@ for key in refnew_list:
     ref, type, name, trial = refnew_list[key][0][:-3].split('_')[:4]
     
     mark_trial = '✅'
-    if trial.endswith('ans'):
+    if unicodedata.normalize('NFC',trial).endswith('답'):
         mark_trial = '✅❗️'
    
     # 새 양식 추가
@@ -179,7 +170,7 @@ with open('../README.md', 'w') as f:
     for line in readme_list:
         f.write(line+'\n')
 
-# filelists 갱신
+## filelists 갱신
 with open('cote-filelists.txt', 'a') as f:
     for line in diff_files:
         f.write(line+'\n')
