@@ -20,7 +20,7 @@ import unicodedata      # 한글 string의 길이를 다르게 인식하는 경�
 
 
 # 이후 링크에 넣기 위해 상위 폴더 이름 불러오기
-folder = os.path.dirname(os.getcwd()).split('/')[-1]
+folder = os.getcwd().split('/')[-1]
 
 
 # 기존 파일 리스트 불러오고 현재 디렉토리 파일과 비교해 추가된 파일을 탐색
@@ -89,7 +89,6 @@ def readme_list_insert(dfiles):
         multi = False
         if trial.startswith('2') or trial.startswith('3'):
             multi = True
-            print('it is multi')
         ##################################################
 
 
@@ -103,9 +102,7 @@ def readme_list_insert(dfiles):
             
 
             if multi and len(refline) > 3:
-                print(unicodedata.normalize('NFC',refline[3]), unicodedata.normalize('NFC',name))
                 if unicodedata.normalize('NFC',refline[3]) == unicodedata.normalize('NFC',name): # 이미 푼 문제인 경우 - 같은 이름 찾아 회차 추가
-                    print('multi!')
                     mark_trial = mark_by_trial(trial)
                     if trial.startswith('2'): 
                         refline[5] = mark_trial
