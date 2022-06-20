@@ -6,21 +6,21 @@
 import os
 import unicodedata      # 한글 string의 길이를 다르게 인식하는 경우가 있어, unicodedata 패키지를 이용해 통일
 
-# # 기존 py 리스트 저장
-# files = []
-# for dirname, _, filenames in os.walk('./'):
-#     for filename in filenames:
-#         if '_' in filename and filename.endswith('py'):
-#             print(filename)
-#             files.append(filename)
-
+# 현재 파일 리스트 저장
 # with open('cote-filelists.txt', 'w') as f:
 #     for file in files:
 #         f.write(file+'\n')
 
 
+# 파일 생성
+if 'cote-filelists.txt' not in os.listdir('.'):
+    with open('cote-filelists.txt', 'w') as f:
+        f.write('')
+
+
+
 # 이후 링크에 넣기 위해 상위 폴더 이름 불러오기
-folder = os.getcwd().split('/')[-1]
+# folder = os.getcwd().split('/')[-1]
 
 
 # 기존 파일 리스트 불러오고 현재 디렉토리 파일과 비교해 추가된 파일을 탐색
@@ -111,8 +111,8 @@ def readme_list_insert(dfiles):
                     else:
                         raise TypeError("입력 회차가 맞지 않습니다.")
                 
-                    # 링크 추가
-                    refline[7] = r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>'
+                    # 링크 추가 - github 에서 한글 파일명을 인식하지 못해 보류..
+                    # refline[7] = r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>'
             
                     # 내용 바꿈
                     readme_list[i] = '| ' + ' | '.join(refline) + ' |'
@@ -128,7 +128,7 @@ def readme_list_insert(dfiles):
 
                 readme_list.insert(i+1, 
                                 '| '+' | '.join(
-                                    [str(int(refline[0])+1), ref, type, name, mark_trial, '', '', r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>']
+                                    [str(int(refline[0])+1), ref, type, name, mark_trial, '', '', '']#r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>']
                                 )+' |')
             
                 break
@@ -141,7 +141,7 @@ def readme_list_insert(dfiles):
 
                 readme_list.append(   # 마지막에 append
                                 '| '+' | '.join(
-                                    [str(int(refline[0])+1), ref, type, name, mark_trial, '', '', r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>']
+                                    [str(int(refline[0])+1), ref, type, name, mark_trial, '', '', '']#r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>']
                                 )+' |')
             
                 break
@@ -160,7 +160,9 @@ for key in refnew_list:
         '## ' + ref,
         '| 순번 | 구분 | 유형 | 문제 | 1회 풀이 | 2회 풀이 | 3회 풀이 | 풀이 코드 |',
         '| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | ------- |',
-        '| '+' | '.join([str(1), ref, type, name, mark_trial, '', '', r'<a href="' + folder + '/' + refnew_list[key][0] + r'">풀이 코드</a>'])+' |'
+        '| '+' | '.join([str(1), ref, type, name, mark_trial, '', '', 
+                        #r'<a href="' + folder + '/' + refnew_list[key][0] + r'">풀이 코드</a>'])
+            ]) + ' |'
     ]
     # breakpoint()
     before_filelist.append(refnew_list[key][0])
