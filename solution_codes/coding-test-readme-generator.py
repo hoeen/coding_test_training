@@ -19,6 +19,10 @@ import unicodedata      # 한글 string의 길이를 다르게 인식하는 경�
 #         f.write(file+'\n')
 
 
+# 이후 링크에 넣기 위해 상위 폴더 이름 불러오기
+folder = os.path.dirname(os.getcwd()).split('/')[-1]
+
+
 # 기존 파일 리스트 불러오고 현재 디렉토리 파일과 비교해 추가된 파일을 탐색
 before_filelist = []
 with open('cote-filelists.txt', 'r') as f:
@@ -111,7 +115,7 @@ def readme_list_insert(dfiles):
                         raise TypeError("입력 회차가 맞지 않습니다.")
                 
                     # 링크 추가
-                    refline[7] = r'<a href="' + new_file + r'">풀이 코드</a>'
+                    refline[7] = r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>'
             
                     # 내용 바꿈
                     readme_list[i] = '| ' + ' | '.join(refline) + ' |'
@@ -127,7 +131,7 @@ def readme_list_insert(dfiles):
 
                 readme_list.insert(i+1, 
                                 '| '+' | '.join(
-                                    [str(int(refline[0])+1), ref, type, name, mark_trial, '', '', r'<a href="' + new_file + r'">풀이 코드</a>']
+                                    [str(int(refline[0])+1), ref, type, name, mark_trial, '', '', r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>']
                                 )+' |')
             
                 break
@@ -140,7 +144,7 @@ def readme_list_insert(dfiles):
 
                 readme_list.append(   # 마지막에 append
                                 '| '+' | '.join(
-                                    [str(int(refline[0])+1), ref, type, name, mark_trial, '', '', r'<a href="' + new_file + r'">풀이 코드</a>']
+                                    [str(int(refline[0])+1), ref, type, name, mark_trial, '', '', r'<a href="' + folder + '/' + new_file + r'">풀이 코드</a>']
                                 )+' |')
             
                 break
@@ -159,7 +163,7 @@ for key in refnew_list:
         '## ' + ref,
         '| 순번 | 구분 | 유형 | 문제 | 1회 풀이 | 2회 풀이 | 3회 풀이 | 풀이 코드 |',
         '| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | ------- |',
-        '| '+' | '.join([str(1), ref, type, name, mark_trial, '', '', r'<a href="' + refnew_list[key][0] + r'">풀이 코드</a>'])+' |'
+        '| '+' | '.join([str(1), ref, type, name, mark_trial, '', '', r'<a href="' + folder + '/' + refnew_list[key][0] + r'">풀이 코드</a>'])+' |'
     ]
     # breakpoint()
     before_filelist.append(refnew_list[key][0])
