@@ -44,6 +44,12 @@ with open('../README.md', 'r') as f:
 
 # print(readme_list)
 
+def mark_by_trial(trial):
+    mark_trial = '✅'
+    if unicodedata.normalize('NFC',trial).endswith('답'):
+        mark_trial = '✅❗️'
+    return mark_trial
+
 def readme_list_insert(dfiles):
     
     global readme_list
@@ -51,7 +57,6 @@ def readme_list_insert(dfiles):
     # 파일 이름 예시: 취코테_그리디_모험가 길드_1회.py
     # breakpoint()
     for new_file in dfiles:
-        print(new_file)
         #### 입력 파일 파악 #################################
         # '_' 로 구분지어 리스트화  - [구분, 유형, 이름, 회차]
         # if len(new_file[:-3].split('_')) < 5:
@@ -59,6 +64,9 @@ def readme_list_insert(dfiles):
         # elif len(new_file[:-3].split('_')) == 5:   # 참고 항목이 뒤에 있을때
         #     ref, type, name, trial, cf = new_file[:-3].split('_')
         
+        # 한글 매칭 위해서 unicodedata 이용
+        ref = unicodedata.normalize('NFC',ref)
+
         # 신규 구분인지 확인
         isNew = True
         
@@ -77,6 +85,7 @@ def readme_list_insert(dfiles):
         multi = False
         if trial.startswith('2') or trial.startswith('3'):
             multi = True
+            print('it is multi')
         ##################################################
 
 
@@ -90,11 +99,10 @@ def readme_list_insert(dfiles):
             
 
             if multi and len(refline) > 3:
-
+                print(unicodedata.normalize('NFC',refline[3]), unicodedata.normalize('NFC',name))
                 if unicodedata.normalize('NFC',refline[3]) == unicodedata.normalize('NFC',name): # 이미 푼 문제인 경우 - 같은 이름 찾아 회차 추가
-                    mark_trial = '✅'
-                    if unicodedata.normalize('NFC',trial).endswith('답'):
-                        mark_trial = '✅❗️'
+                    print('multi!')
+                    mark_trial = mark_by_trial(trial)
                     if trial.startswith('2'): 
                         refline[5] = mark_trial
                     elif trial.startwith('3'):
@@ -115,9 +123,7 @@ def readme_list_insert(dfiles):
                 '|' in readme_list[i] and ref in readme_list[i] and \
                 '|' not in readme_list[i+1] and ref not in readme_list[i+1]:
 
-                mark_trial = '✅'
-                if unicodedata.normalize('NFC',trial).endswith('답'):
-                    mark_trial = '✅❗️'
+                mark_trial = mark_by_trial(trial)
 
                 readme_list.insert(i+1, 
                                 '| '+' | '.join(
@@ -130,9 +136,7 @@ def readme_list_insert(dfiles):
             elif i == len(readme_list)-1 and \
                 '|' in readme_list[i] and ref in readme_list[i]:
 
-                mark_trial = '✅'
-                if unicodedata.normalize('NFC',trial).endswith('답'):
-                    mark_trial = '✅❗️'
+                mark_trial = mark_by_trial(trial)
 
                 readme_list.append(   # 마지막에 append
                                 '| '+' | '.join(
@@ -148,9 +152,7 @@ refnew_list = readme_list_insert(diff_files)
 for key in refnew_list:
     ref, type, name, trial = refnew_list[key][0][:-3].split('_')[:4]
     
-    mark_trial = '✅'
-    if unicodedata.normalize('NFC',trial).endswith('답'):
-        mark_trial = '✅❗️'
+    mark_trial = mark_by_trial(trial)
    
     # 새 양식 추가
     readme_list += [

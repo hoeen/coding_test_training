@@ -89,23 +89,24 @@ def readme_list_insert(diff_files):
             refline = [f.strip() for f in readme_list[i].split('|')]
             refline = refline[1:len(refline)-1]
 
-            if multi and refline[3].encode() == name.encode(): # 이미 푼 문제인 경우 - 같은 이름 찾아 회차 추가
-                mark_trial = '✅'
-                if trial.endswith('ans'):
-                    mark_trial += '❗️'
-                if trial.startswith('2'): 
-                    refline[5] = mark_trial
-                elif trial.startwith('3'):
-                    refline[6] = mark_trial
-                else:
-                    raise TypeError("입력 회차가 맞지 않습니다.")
-                
-                # 링크 추가
-                refline[7] = r'<a href="' + new_file + r'">풀이 코드</a>'
+            if multi and len(refline) > 3:
+                if refline[3].encode() == name.encode(): # 이미 푼 문제인 경우 - 같은 이름 찾아 회차 추가
+                    mark_trial = '✅'
+                    if trial.endswith('ans'):
+                        mark_trial += '❗️'
+                    if trial.startswith('2'): 
+                        refline[5] = mark_trial
+                    elif trial.startwith('3'):
+                        refline[6] = mark_trial
+                    else:
+                        raise TypeError("입력 회차가 맞지 않습니다.")
+                    
+                    # 링크 추가
+                    refline[7] = r'<a href="' + new_file + r'">풀이 코드</a>'
 
-                # 내용 바꿈
-                readme_list[i] = '| ' + ' | '.join(refline) + ' |'
-                break
+                    # 내용 바꿈
+                    readme_list[i] = '| ' + ' | '.join(refline) + ' |'
+                    break
             
 
             # 기존 구분에 속한 신규 문제인 경우 : 같은 구분 마지막에 줄 추가
