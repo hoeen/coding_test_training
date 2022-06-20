@@ -17,9 +17,9 @@
 ## bookcodingtest
 | 순번 | 구분 | 유형 | 문제 | 1회 풀이 | 2회 풀이 | 3회 풀이 | 풀이 코드 |
 | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | ------- |
-| 1 | bookcodingtest | 그래프 | 어두운길 | ✅ |  |  | [풀이 코드](solution_codes/bookcodingtest_그래프_어두운길_1회.py) |
+| 1 | bookcodingtest | 그래프 | 어두운길 | ✅ |  |  | [풀이 코드](solution_codes/baekjoon_implementation_test_1sol.py) |
 | 2 | bookcodingtest | 최단경로 | 숨바꼭질 | ✅ |  |  | <a href="solution_codes/bookcodingtest_최단경로_숨바꼭질_1회.py">풀이 코드</a> |
-| 3 | bookcodingtest | dfsbfs | 연구소 | ✅ |  |  | <a href="solution_codes/bookcodingtest_dfsbfs_연구소_1회.py">풀이 코드</a> |
+| 3 | bookcodingtest | dfsbfs | 연구소 | ✅ |  |  | <a href="solution_codes/baekjoon_implementation_test_1sol.py">풀이 코드</a> |
 | 4 | bookcodingtest | 그래프 | 행성터널 | ✅ |  |  | <a href="solution_codes/bookcodingtest_그래프_행성터널_1회.py">풀이 코드</a> |
 | 5 | bookcodingtest | 구현 | 럭키스트레이트 | ✅ |  |  | <a href="solution_codes/bookcodingtest_구현_럭키스트레이트_1회.py">풀이 코드</a> |
 | 6 | bookcodingtest | 그래프 | 여행계획 | ✅ |  |  | <a href="solution_codes/bookcodingtest_그래프_여행계획_1회.py">풀이 코드</a> |
