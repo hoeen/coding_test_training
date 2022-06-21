@@ -62,3 +62,6 @@ bookcodingtest_그리디_무지의먹방라ᄋ�
 samsung_BFSDFS, 구현_마법사상어와복제_1회답.py
 bookcodingtest_dfsbfs_빙산_1회.py
 baekjoon_구현_시험감독_2회답.py
+baekjoon_구현_시험감독_1회답.py
+baekjoon_구현_시험감독_2회.py
+bookcodingtest_이진탐색_가사검색_1회답.py
