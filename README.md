@@ -105,4 +105,5 @@
 |  43  | bookcodingtest |  그리디  |   무지의먹방라이브   |    ✅     |          |          |           |
 |  44  | bookcodingtest |  dfsbfs  |         빙산         |    ✅     |          |          |           |
 | 45 | bookcodingtest | 이진탐색 | 가사검색 | ✅❗️ |  |  |  |
+| 46 | bookcodingtest | DP | 금광 | ✅ |  |  |  |
 

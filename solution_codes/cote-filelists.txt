@@ -65,3 +65,4 @@ baekjoon_구현_시험감독_2회답.py
 baekjoon_구현_시험감독_1회답.py
 baekjoon_구현_시험감독_2회.py
 bookcodingtest_이진탐색_가사검색_1회답.py
+bookcodingtest_DP_금광_1회.py
