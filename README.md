@@ -44,7 +44,7 @@
 | 2 | samsung | DFSBFS, 구현 | 주사위굴리기2 | ✅ |  |  |  |
 | 3 | samsung | DFSBFS, 구현 | 상어중학교 | ✅ |  |  |  |
 | 4 | samsung | DFSBFS, 구현 | 아기상어 | ✅ |  |  |  |
-| 5 | samsung | DFSBFS, 구현 | 퇴사 | ✅ |  |  |  |
+| 5 | samsung | DFSBFS, 구현 | 퇴사 | ✅ | ✅ |  |  |
 | 6 | samsung | DFSBFS, 구현 | 2048 | ✅❗️ |  |  |  |
 | 7 | samsung | BFS | 구슬탈출2 | ✅❗️ |  |  |  |
 | 8 | samsung | DFSBFS, 구현 | 테트로미노 | ✅ |  |  |  |
