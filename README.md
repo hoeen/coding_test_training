@@ -109,4 +109,9 @@
 | 45 | bookcodingtest | 이진탐색 | 가사검색 | ✅❗️ |  |  |  |
 | 46 | bookcodingtest | DP | 금광 | ✅ |  |  |  |
 | 47 | bookcodingtest | DP | 못생긴 수 | ✅ |  |  |  |
+| 48 | bookcodingtest | DP | 편집 거리 | ✅❗️ |  |  |  |
 
+## codility
+| 순번 | 구분 | 유형 | 문제 | 1회 풀이 | 2회 풀이 | 3회 풀이 | 풀이 코드 |
+| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | ------- |
+| 1 | codility | 정규식 | LongestPassword | ✅ |  |  |

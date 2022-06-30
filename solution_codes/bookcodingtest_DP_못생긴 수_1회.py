@@ -13,6 +13,7 @@ def ugly(n):
     return tab[n-1]
 
 
+
 n = int(input())
 print(ugly(n))
 
