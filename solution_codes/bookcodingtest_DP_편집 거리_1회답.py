@@ -28,7 +28,3 @@ for t in table:
 
 print(table[-1][-1])
         
-        
-    
-    
-# 
