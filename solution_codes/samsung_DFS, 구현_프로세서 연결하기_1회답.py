@@ -105,9 +105,3 @@ core_wire.sort(key=lambda x: (-x[0], x[1]))
 # print(core_wire)
 # print(len(core_wire))
 print(core_wire[0][1])
-
-# print(pos_list)
-    
-
-
-
