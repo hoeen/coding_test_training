@@ -108,6 +108,7 @@
 | 46 | bookcodingtest | DP | 금광 | ✅ |  |  |  |
 | 47 | bookcodingtest | DP | 못생긴 수 | ✅ |  |  |  |
 | 48 | bookcodingtest | DP | 편집 거리 | ✅❗️ |  |  |  |
+| 49 | bookcodingtest | BFS | 블록 이동하기 | ✅❗️ |  |  |  |
 
 
 
