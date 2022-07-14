@@ -11,7 +11,7 @@ def union_parent(parent, a, b):
     b = find_parent(parent, b)
     if a < b:
         parent[b] = a
-    elif a > b:
+    else:
         parent[a] = b
         
 def solution(n, computers):

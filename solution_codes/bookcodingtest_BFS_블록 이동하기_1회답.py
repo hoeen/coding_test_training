@@ -93,3 +93,4 @@ def solution(board):
     
     answer = min_time
     return answer
+    
