@@ -33,6 +33,9 @@
 | 9 | baekjoon | 구현 | 시험감독 | ✅❗️ |  |  |  |
 | 10 | baekjoon | DP | 정수 삼각형 | ✅ |  |  |  |
 | 11 | baekjoon | DP | 병사 배치하기 | ✅❗️ |  |  |  |
+| 12 | baekjoon | DP | 신나는 함수 실행 | ✅ |  |  |  |
+| 13 | baekjoon | DP | 연속합 | ✅❗️ |  |  |  |
+| 14 | baekjoon | DP | 피보나치 수 | ✅ |  |  |  |
 
 
 
