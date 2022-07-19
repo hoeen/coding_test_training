@@ -85,3 +85,5 @@ baekjoon_순열조합_암호 만들기_1회.py
 baekjoon_투포인터_두 수의 합_1회.py
 baekjoon_투포인터_두 용액_1회.py
 programmers_해시_오픈채팅방_1회.py
+baekjoon_DP_팰린드롬?_1회답.py
+samsung_구현_경사로_1회.py
