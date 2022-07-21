@@ -1,10 +1,10 @@
 # ~13:00
-# n, l = map(int, input().split())
-# board = []
-# for _ in range(n):
-#     board.append(list(map(int, input().split())))
+n, l = map(int, input().split())
+board = []
+for _ in range(n):
+    board.append(list(map(int, input().split())))
 
-n, l = 6, 2
+# n, l = 6, 2
 
 # board = [ 
 # [3, 3, 3, 3, 3, 3],
@@ -14,14 +14,14 @@ n, l = 6, 2
 # [1, 1, 1, 3, 3, 1],
 # [1, 1, 2, 3, 3, 2]]
 
-board = [ 
-[3, 2, 1, 1, 2, 3],
-[3, 2, 2, 1, 2, 3],
-[3, 2, 2, 2, 3, 3],
-[3, 3, 3, 3, 3, 3],
-[3, 3, 3, 3, 2, 2],
-[3, 3, 3, 3, 2, 2],
-]
+# board = [ 
+# [3, 2, 1, 1, 2, 3],
+# [3, 2, 2, 1, 2, 3],
+# [3, 2, 2, 2, 3, 3],
+# [3, 3, 3, 3, 3, 3],
+# [3, 3, 3, 3, 2, 2],
+# [3, 3, 3, 3, 2, 2],
+# ]
 
 # 회전 보드
 rot_board = []
@@ -60,8 +60,8 @@ def cango(hor):
                     return False
             else: 
                 return False
-    print('passed!')
-    print(hor, visit)
+    # print('passed!')
+    # print(hor, visit)
     return True
 
 # 끝에서 끝까지 갈수있는지 판단
