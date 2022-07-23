@@ -142,3 +142,4 @@
 | 2 | programmers | BFS | 게임 맵 최단거리 | ✅❗️ |  |  |  |
 | 3 | programmers | 해시 | 오픈채팅방 | ✅ |  |  |  |
 | 4 | programmers | 구현, 수학 | 교점에 별 만들기 | ✅ |  |  |  |
+| 5 | programmers | 이분탐색 | 입국심사 | ✅ |  |  |  |
