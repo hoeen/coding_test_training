@@ -27,8 +27,15 @@ def check(lines, startx, starty, count): # startx, starty 처음에 0,0
     if m == 0:
         max_count = 0
         return
-    
-    if count > 3 or (0 < max_count <= count):
+        
+    if arrive(lines) == list(range(1,n+1)):
+        print('found')
+        time.sleep(1)
+        if max_count == -1 or count < max_count: 
+            max_count = count
+        return
+
+    if count == 3 or (0 < max_count <= count):
         return
 
     time.sleep(1)
@@ -36,12 +43,7 @@ def check(lines, startx, starty, count): # startx, starty 처음에 0,0
     for l in lines:
         print(l)
 
-    if arrive(lines) == list(range(1,n+1)):
-        print('found')
-        time.sleep(1)
-        if max_count == -1 or count < max_count: 
-            max_count = count
-        
+    
 
     for x in range(max(0,startx), h):
         for y in range(n-1):
