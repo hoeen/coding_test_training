@@ -91,3 +91,4 @@ programmers_구현, 수학_교점에 별 만들기_1회.py
 programmers_이분탐색_입국심사_1회.py
 baekjoon_구현, 백트래킹_사다리 조작_1회답.py
 programmers_그래프, 다익스트라_가장 먼 노드_1회답.py
+programmers_스택, 큐_짝지어 제거하기_1회.py
