@@ -94,3 +94,5 @@ programmers_그래프, 다익스트라_가장 먼 노드_1회답.py
 programmers_스택, 큐_짝지어 제거하기_1회.py
 sql_JOIN_없어진 기록 찾기_1회.sql
 sql_GROUP BY_동명 동물 수 찾기_1회.sql
+baekjoon_그리디_보석 도둑_1회답.py
+baekjoon_DFS_색종이 만들기_1회.py
