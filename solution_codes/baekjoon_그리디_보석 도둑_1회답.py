@@ -29,7 +29,7 @@ for i in range(k):
     bag = bags[i]
     # print('bag weight:', bag)
     while seq and bag >= seq[0][0]: # 무게
-        weight, price = heapq.heappop(seq)
+        weight, price = seq.pop(0)
         # print(weight, price)
         heapq.heappush(temp, -price) # 음수로 넣으면 heappop 시 최댓값부터 -로 반환시킴
     # print(temp, seq)

@@ -96,3 +96,4 @@ sql_JOIN_없어진 기록 찾기_1회.sql
 sql_GROUP BY_동명 동물 수 찾기_1회.sql
 baekjoon_그리디_보석 도둑_1회답.py
 baekjoon_DFS_색종이 만들기_1회.py
+programmers_큐, 구현_행렬 테두리 회전하기_1회.py
