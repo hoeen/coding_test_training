@@ -101,3 +101,4 @@ baekjoon_백트래킹_색종이 붙이기_1회답.py
 samsung_시뮬레이션_캐슬 디펜스_1회답.py
 programmers_수학_124 나라의 숫자_1회.py
 programmers_힙_디스크 컨트롤러_1회답.py
+samsung_시뮬레이션_로봇 청소기_1회답.py
