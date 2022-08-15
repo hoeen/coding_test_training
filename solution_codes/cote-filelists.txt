@@ -106,3 +106,4 @@ programmers_그리디_체육복_1회.py
 programmers_그리디, 투포인터_두 큐 합 같게 만들기_1회답.py
 samsung_dfs, 백트래킹_스타트와 링크_1회답.py
 baekjoon_DFS, BFS_바이러스_1회.py
+samsung_시뮬레이션_나무 재테크_1회.py
