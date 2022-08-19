@@ -47,6 +47,7 @@
 | 23 | baekjoon | 백트래킹 | 색종이 붙이기 | ✅❗️ |  |  |  |
 | 24 | baekjoon | DFS, BFS | 바이러스 | ✅ |  |  |  |
 | 25 | baekjoon | BFS | 스타트링크 | ✅❗️ |  |  |  |
+| 26 | baekjoon | BFS | 단지번호붙이기 | ✅ |  |  |  |
 
 
 
