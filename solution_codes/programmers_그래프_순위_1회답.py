@@ -23,3 +23,27 @@ def solution(n, results):
             answer += 1
     
     return answer
+
+# 플로이드 워셜 이용한 풀이
+def solution(n, results):
+    board = [[0]*(n+1) for _ in range(n+1)]
+    for w, l in results:
+        board[w][l] = 1 # w가 l 이김
+        board[l][w] = -1 # l은 w한테 짐
+    # 플로이드 워셜 알고리즘 - k, a, b 순서 중요. 
+    for k in range(1, n+1):
+        for x in range(1, n+1):
+            for y in range(1, n+1):
+                # 양수이면 관계 파악 가능, 음수 혹은 0이면 불가능
+                if board[x][k] * board[k][y] > 0: # 지고 지거나 이기고 이기면 확인됨
+                    board[x][y] = board[x][k]
+                    
+    for b in board:
+        print(b)
+    answer = 0
+    for i in range(1, n+1):
+        print(board[i][1:])
+        print('count 0:', board[i][1:].count(0))
+        if board[i][1:].count(0) == 1:
+            answer += 1
+    return answer
