@@ -37,13 +37,9 @@ def solution(n, results):
                 # 양수이면 관계 파악 가능, 음수 혹은 0이면 불가능
                 if board[x][k] * board[k][y] > 0: # 지고 지거나 이기고 이기면 확인됨
                     board[x][y] = board[x][k]
-                    
-    for b in board:
-        print(b)
     answer = 0
     for i in range(1, n+1):
-        print(board[i][1:])
-        print('count 0:', board[i][1:].count(0))
         if board[i][1:].count(0) == 1:
             answer += 1
+            
     return answer
