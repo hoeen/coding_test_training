@@ -113,4 +113,4 @@ programmers_DP_등굣길_1회.py
 programmers_DP_N으로 표현_1회답.py
 samsung_구현_톱니바퀴_1회.py
 programmers_그래프_순위_1회답.py
-samsung_구현_감시_1회답.py
+samsung_구현, DFS_감시_1회답.py

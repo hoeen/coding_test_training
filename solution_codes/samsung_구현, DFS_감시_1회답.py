@@ -1,12 +1,45 @@
 # ~ 11:30 ~12:00
 # 사각 지대의 최소 크기를 구하는 프로그램을 작성하시오.
-n, m = 4, 6
-board = [
-[0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0],
-[0, 0, 1, 0, 6, 0],
-[0, 0, 0, 0, 0, 0]
-]
+# n, m = 4, 6
+# board = [
+# [0, 0, 0, 0, 0, 0],
+# [0, 0, 0, 0, 0, 0],
+# [0, 0, 1, 0, 6, 0],
+# [0, 0, 0, 0, 0, 0]
+# ]
+
+# n, m = 6, 6
+# board = [ 
+# [0, 0, 0, 0, 0, 0],
+# [0, 2, 0, 0, 0, 0],
+# [0, 0, 0, 0, 6, 0],
+# [0, 6, 0, 0, 2, 0],
+# [0, 0, 0, 0, 0, 0],
+# [0, 0, 0, 0, 0, 5],
+# ]
+
+# n, m = 6, 6
+# board = [ 
+# [1, 0, 0, 0, 0, 0],
+# [0, 1, 0, 6, 0, 0],
+# [0, 0, 1, 5, 0, 0],
+# [0, 0, 5, 1, 0, 0],
+# [0, 0, 0, 0, 1, 0],
+# [0, 0, 0, 0, 0, 1],    
+# ]
+
+# n, m = 1, 7
+# board = [[0,1,2,3,4,5,6]]
+
+# n, m = 3, 7
+# board = [ 
+# [0, 0, 0, 6, 0, 0, 0],
+# [0, 4, 0, 0, 0, 4, 0],
+# [0, 0, 0, 0, 0, 0, 0],
+# ]
+
+n, m = map(int, input().split())
+board = [list(map(int, input().split())) for _ in range(n)]
 
 # cctv 방향마다 사각지대 구해서 최솟값 리턴
 dx = (-1, 0, 1, 0) # 상우하좌 시계방향
@@ -14,11 +47,11 @@ dy = (0, 1, 0, -1)
 
 # cctv 방향? 1,2,3,4,5  
 # 상 부터 0,1,2,3 으로 시계방향으로 설정
-cams = [None, [0], [1,3], [0,1], [0,1,2], [0,1,2,3]]
+cams = [None, [0], [0,2], [0,1], [0,1,2], [0,1,2,3]]
 # 1, 3, 4 번은 4가지 가능. 2번은 2가지 가능, 5번은 1가지
 # -1로 감시영역을 바꾸고 남은 0의 개수를 세면 됨.
 
-def surv(x, y, di): # 감시 영역 -1로 바꾸는 함수
+def surv(x, y, di, room): # 감시 영역 -1로 바꾸는 함수
     nx, ny = x + dx[di], y + dy[di] # 방향따라 한칸 이동
     while (0 <= nx < n) and (0 <= ny < m) \
         and room[nx][ny] != 6:
@@ -33,7 +66,7 @@ def surv(x, y, di): # 감시 영역 -1로 바꾸는 함수
 # 카메라마다 방향 정해줘서 완전탐색 수행
 # cams의 방향을 계속 변경 - dfs, 첫번째가 다시 [0]이면 중단
 
-def find_zero():
+def find_zero(room):
     # for x in range(n):
     #     for y in range(m):
     #         if 0 < room[x][y] < 6: # 카메라 찾은경우
@@ -57,11 +90,8 @@ def find_cams():
     return cam_list
 
 
-org_cam_list = find_cams()
-cam_list = [c[:] for c in org_cam_list]
-min_dark = int(1e9)
-
-print(cam_list)
+cam_list = find_cams()
+min_dark = find_zero(board)
 
 ''' 
 (x,y,1,0), (x,y,3,0), (x,y,4,0) 
@@ -69,49 +99,41 @@ print(cam_list)
 맨끝부터 조건에 맞게 1씩 증가시키고, 원래로 돌아오면 앞에것을 1씩 증가시킨다.
 만약 처음으로 돌아오면 종료시킨다. 
 '''
-while True:
-    # 맨처음거 방향 증가
-    cam_list[0][-1] += 1
-    cam_list[0][-1] == 
-    for i in range(1, len(cam_list)): 
-    # 앞이 0이 되면 1을 증가시키기
-        if cam_list[i-1][-1] == 0:
-            cam_list[i][-1] += 1
-            # 3,4의 경우 // 4, 2인 경우 // 2
-            if 3 <= cam_list[i][-2] < 4: 
-                cam_list[i][-1] //= 4
-            elif cam_list[i][-2] == 2:
-                cam_list[i][-1] //= 2
-    print(cam_list)
-    if cam_list == org_cam_list: # 같아지면 모든 방법을 다 이용했으므로
-        print('same')
-        break
 
+def dfs(cam_list, ind):
+    global min_dark
     room = [b[:] for b in board]
-
+    
+    # 현재 상태에서 감시 영역 체크
     for (x, y), cam_num, di in cam_list:
-        if cam_num == 2:
-            cam_dir = [c + di for c in cams[cam_num]]
-        elif cam_num != 5:
-            cam_dir = [(c + di) // 4 for c in cams[cam_num]]
-        else:
-            cam_dir = cams[cam_num]
+        # print((x,y), cam_num, di)
+        cam_dir = [(c + di) % 4 for c in cams[cam_num]]
+        # print('cam_dir:' ,cam_dir)
         for di in cam_dir: 
-            surv(x, y, di)
+            # print('di:', di)
+            surv(x, y, di, room)
 
     # find zero
-    dark = find_zero()
+    dark = find_zero(room)
     if min_dark > dark:
         min_dark = dark
 
-    # loop check
-    for r in room:
-        print(r)
+    new1_cam_list = [c[:] for c in cam_list]
+    if ind < len(cam_list) - 1:
+        dfs(new1_cam_list, ind+1) # 재귀1 : 다음 cam으로 넘김
 
+    # 재귀2 : 현재 cam 방향 돌리기
+    cam_list[ind][-1] += 1
+    cam_list[ind][-1] %= 4
+
+    # 다시 0으로 돌아온다면 종료
+    if cam_list[ind][-1] == 0:
+        return
+    
+    new2_cam_list = [c[:] for c in cam_list]    
+    dfs(new2_cam_list, ind)
+
+if cam_list:
+    dfs(cam_list, 0)
 
 print(min_dark)
-
-
-        
-        
-        
