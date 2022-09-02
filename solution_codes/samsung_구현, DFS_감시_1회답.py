@@ -1,43 +1,4 @@
-# ~ 11:30 ~12:00
 # 사각 지대의 최소 크기를 구하는 프로그램을 작성하시오.
-# n, m = 4, 6
-# board = [
-# [0, 0, 0, 0, 0, 0],
-# [0, 0, 0, 0, 0, 0],
-# [0, 0, 1, 0, 6, 0],
-# [0, 0, 0, 0, 0, 0]
-# ]
-
-# n, m = 6, 6
-# board = [ 
-# [0, 0, 0, 0, 0, 0],
-# [0, 2, 0, 0, 0, 0],
-# [0, 0, 0, 0, 6, 0],
-# [0, 6, 0, 0, 2, 0],
-# [0, 0, 0, 0, 0, 0],
-# [0, 0, 0, 0, 0, 5],
-# ]
-
-# n, m = 6, 6
-# board = [ 
-# [1, 0, 0, 0, 0, 0],
-# [0, 1, 0, 6, 0, 0],
-# [0, 0, 1, 5, 0, 0],
-# [0, 0, 5, 1, 0, 0],
-# [0, 0, 0, 0, 1, 0],
-# [0, 0, 0, 0, 0, 1],    
-# ]
-
-# n, m = 1, 7
-# board = [[0,1,2,3,4,5,6]]
-
-# n, m = 3, 7
-# board = [ 
-# [0, 0, 0, 6, 0, 0, 0],
-# [0, 4, 0, 0, 0, 4, 0],
-# [0, 0, 0, 0, 0, 0, 0],
-# ]
-
 n, m = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(n)]
 
@@ -45,10 +6,8 @@ board = [list(map(int, input().split())) for _ in range(n)]
 dx = (-1, 0, 1, 0) # 상우하좌 시계방향
 dy = (0, 1, 0, -1)
 
-# cctv 방향? 1,2,3,4,5  
 # 상 부터 0,1,2,3 으로 시계방향으로 설정
 cams = [None, [0], [0,2], [0,1], [0,1,2], [0,1,2,3]]
-# 1, 3, 4 번은 4가지 가능. 2번은 2가지 가능, 5번은 1가지
 # -1로 감시영역을 바꾸고 남은 0의 개수를 세면 됨.
 
 def surv(x, y, di, room): # 감시 영역 -1로 바꾸는 함수
@@ -63,23 +22,13 @@ def surv(x, y, di, room): # 감시 영역 -1로 바꾸는 함수
         nx, ny = nx + dx[di], ny + dy[di]
     return
 
-# 카메라마다 방향 정해줘서 완전탐색 수행
-# cams의 방향을 계속 변경 - dfs, 첫번째가 다시 [0]이면 중단
-
 def find_zero(room):
-    # for x in range(n):
-    #     for y in range(m):
-    #         if 0 < room[x][y] < 6: # 카메라 찾은경우
-    #             cnum = room[x][y] 
-    #             for direc in cams[cnum]:
-    #                 surv(x, y, direc)
     count = 0 
     for x in range(n):
         for y in range(m):
             if room[x][y] == 0:
                 count += 1
     return count
-
 
 def find_cams():
     cam_list = []
@@ -89,28 +38,25 @@ def find_cams():
                 cam_list.append([(x,y),board[x][y],0]) #(위치), 값, 방향 0
     return cam_list
 
-
 cam_list = find_cams()
 min_dark = find_zero(board)
 
+# 카메라마다 방향 정해줘서 완전탐색 수행
+# dfs
 ''' 
 (x,y,1,0), (x,y,3,0), (x,y,4,0) 
 숫자에 맞게 회전시키고 dfs 로 ?  혹은 while
 맨끝부터 조건에 맞게 1씩 증가시키고, 원래로 돌아오면 앞에것을 1씩 증가시킨다.
 만약 처음으로 돌아오면 종료시킨다. 
 '''
-
 def dfs(cam_list, ind):
     global min_dark
     room = [b[:] for b in board]
     
     # 현재 상태에서 감시 영역 체크
     for (x, y), cam_num, di in cam_list:
-        # print((x,y), cam_num, di)
         cam_dir = [(c + di) % 4 for c in cams[cam_num]]
-        # print('cam_dir:' ,cam_dir)
         for di in cam_dir: 
-            # print('di:', di)
             surv(x, y, di, room)
 
     # find zero
