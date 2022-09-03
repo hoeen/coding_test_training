@@ -115,3 +115,4 @@ samsung_구현_톱니바퀴_1회.py
 programmers_그래프_순위_1회답.py
 samsung_구현, DFS_감시_1회답.py
 samsung_시뮬레이션_드래곤 커브_1회.py
+samsung_시뮬레이션_큐빙_1회.py
