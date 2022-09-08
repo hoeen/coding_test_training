@@ -53,6 +53,7 @@
 | 29 | baekjoon | 정규식 | 창영이의일기장 | ✅ |  |  |  |
 | 30 | baekjoon | 정규식 | 모음의개수 | ✅ |  |  |  |
 | 31 | baekjoon | 정규식 | 출력형식이잘못되었습니다 | ✅ |  |  |  |
+| 32 | baekjoon | 그래프 | 최단경로 | ✅❗️ |  |  |  |
 
 
 
@@ -89,12 +90,11 @@
 | 25 | samsung | DFSBFS, 구현 | 상어중학교 | ✅ |  |  |  |
 | 26 | samsung | BFS | 구슬탈출2 | ✅❗️ |  |  |  |
 | 27 | samsung | DFSBFS, 구현 | 청소년상어 | ✅ |  |  |  |
-| 28 | samsung | DFSBFS, 구현 | 테트로미노 | ✅ |  |  |  |
-| 29 | samsung | DFSBFS, 구현 | 마법사상어와블리자드 | ✅ |  |  |  |
-| 30 | samsung | DFSBFS, 구현 | 주사위굴리기2 | ✅ |  |  |  |
-| 31 | samsung | DFSBFS, 구현 | 아기상어 | ✅ |  |  |  |
-| 32 | samsung | DFSBFS, 구현 | 2048 | ✅❗️ |  |  |  |
-| 33 | samsung | DFSBFS, 구현 | 퇴사 | ✅ |  |  |  |
+| 28 | samsung | DFSBFS, 구현 | 마법사상어와블리자드 | ✅ |  |  |  |
+| 29 | samsung | DFSBFS, 구현 | 주사위굴리기2 | ✅ |  |  |  |
+| 30 | samsung | DFSBFS, 구현 | 아기상어 | ✅ |  |  |  |
+| 31 | samsung | DFSBFS, 구현 | 2048 | ✅❗️ |  |  |  |
+| 32 | samsung | DFSBFS, 구현 | 퇴사 | ✅ |  |  |  |
 
 
 

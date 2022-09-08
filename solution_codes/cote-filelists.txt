@@ -148,7 +148,7 @@ bookcodingtest_정렬_실패율_1회.py
 bookcodingtest_dfsbfs_빙산_1회.py
 bookcodingtest_정렬_국영수_1회.py
 baekjoon_정규식_창영이의일기장_1회.py
-samsung_DFSBFS, 구현_테트로미노_2회.py
+samsung_DFSBFS, 구현_테트로미노_1회.py
 samsung_DFSBFS, 구현_상어중학교_1회.py
 bookcodingtest_그래프_여행계획_1회.py
 bookcodingtest_그리디_문자열뒤집기_1회.py
@@ -159,7 +159,6 @@ samsung_BFS_구슬탈출2_1회답.py
 bookcodingtest_dfsbfs_연산자끼워넣기_1회.py
 samsung_DFSBFS, 구현_청소년상어_1회.py
 bookcodingtest_그리디_곱하기혹은더하기_1회.py
-samsung_DFSBFS, 구현_테트로미노_1회.py
 bookcodingtest_구현_기둥과보설치_1회.py
 samsung_DFSBFS, 구현_마법사상어와블리자드_1회.py
 bookcodingtest_구현_문자열재정렬_1회.py
@@ -178,3 +177,5 @@ baekjoon_정규식_출력형식이잘못되었습니다_1회.py
 samsung_DFSBFS, 구현_2048_1회답.py
 samsung_DFSBFS, 구현_퇴사_1회.py
 bookcodingtest_구현_럭키스트레이트_1회.py
+baekjoon_그래프_최단경로_1회답.py
+samsung_DFSBFS, 구현_테트로미노_2회.py
