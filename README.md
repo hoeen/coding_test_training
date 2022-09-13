@@ -95,6 +95,7 @@
 | 30 | samsung | DFSBFS, 구현 | 아기상어 | ✅ |  |  |  |
 | 31 | samsung | DFSBFS, 구현 | 2048 | ✅❗️ |  |  |  |
 | 32 | samsung | DFSBFS, 구현 | 퇴사 | ✅ |  |  |  |
+| 33 | samsung | 시뮬레이션 | 미세먼지 안녕 | ✅ |  |  |  |
 
 
 
