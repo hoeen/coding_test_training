@@ -48,11 +48,6 @@
 | 24 | baekjoon | DFS, BFS | 바이러스 | ✅ |  |  |  |
 | 25 | baekjoon | BFS | 스타트링크 | ✅❗️ |  |  |  |
 | 26 | baekjoon | BFS | 단지번호붙이기 | ✅ |  |  |  |
-| 27 | baekjoon | 정규식 | 문서 검색 | ✅ |  |  |  |
-| 28 | baekjoon | 정규식 | FBI | ✅ |  |  |  |
-| 29 | baekjoon | 정규식 | 창영이의일기장 | ✅ |  |  |  |
-| 30 | baekjoon | 정규식 | 모음의개수 | ✅ |  |  |  |
-| 31 | baekjoon | 정규식 | 출력형식이잘못되었습니다 | ✅ |  |  |  |
 
 
 
@@ -69,7 +64,7 @@
 | 5 | samsung | DFSBFS, 구현 | 퇴사 | ✅ | ✅ |  |  |
 | 6 | samsung | DFSBFS, 구현 | 2048 | ✅❗️ |  |  |  |
 | 7 | samsung | BFS | 구슬탈출2 | ✅❗️ |  |  |  |
-| 8 | samsung | DFSBFS, 구현 | 테트로미노 | ✅ | ✅ |  |  |
+| 8 | samsung | DFSBFS, 구현 | 테트로미노 | ✅ |  |  |  |
 | 9 | samsung | DFSBFS, 구현 | 주사위굴리기 | ✅ |  |  |  |
 | 10 | samsung | DFSBFS, 구현 | 청소년상어 | ✅ |  |  |  |
 | 11 | samsung | DFSBFS, 구현 | 마법사상어와블리자드 | ✅ |  |  |  |
@@ -83,18 +78,6 @@
 | 19 | samsung | 구현, DFS | 감시 | ✅❗️ |  |  |  |
 | 20 | samsung | 시뮬레이션 | 드래곤 커브 | ✅ |  |  |  |
 | 21 | samsung | 시뮬레이션 | 큐빙 | ✅ |  |  |  |
-| 22 | samsung | DFSBFS, 구현 | 온풍기 안녕 | ✅ |  |  |  |
-| 23 | samsung | BFSDFS, 구현 | 마법사상어와복제 | ✅❗️ |  |  |  |
-| 24 | samsung | DFSBFS, 구현 | 주사위굴리기 | ✅ |  |  |  |
-| 25 | samsung | DFSBFS, 구현 | 상어중학교 | ✅ |  |  |  |
-| 26 | samsung | BFS | 구슬탈출2 | ✅❗️ |  |  |  |
-| 27 | samsung | DFSBFS, 구현 | 청소년상어 | ✅ |  |  |  |
-| 28 | samsung | DFSBFS, 구현 | 테트로미노 | ✅ |  |  |  |
-| 29 | samsung | DFSBFS, 구현 | 마법사상어와블리자드 | ✅ |  |  |  |
-| 30 | samsung | DFSBFS, 구현 | 주사위굴리기2 | ✅ |  |  |  |
-| 31 | samsung | DFSBFS, 구현 | 아기상어 | ✅ |  |  |  |
-| 32 | samsung | DFSBFS, 구현 | 2048 | ✅❗️ |  |  |  |
-| 33 | samsung | DFSBFS, 구현 | 퇴사 | ✅ |  |  |  |
 
 
 
@@ -151,50 +134,6 @@
 | 47 | bookcodingtest | DP | 못생긴 수 | ✅ |  |  |  |
 | 48 | bookcodingtest | DP | 편집 거리 | ✅❗️ |  |  |  |
 | 49 | bookcodingtest | BFS | 블록 이동하기 | ✅❗️ |  |  |  |
-| 50 | bookcodingtest | 구현 | 자물쇠와열쇠 | ✅ |  |  |  |
-| 51 | bookcodingtest | 그리디 | 볼링공고르기 | ✅ |  |  |  |
-| 52 | bookcodingtest | dfsbfs | 연구소 | ✅ |  |  |  |
-| 53 | bookcodingtest | 그리디 | 무지의먹방라이브 | ✅ |  |  |  |
-| 54 | bookcodingtest | 구현 | 문자열압축 | ✅ |  |  |  |
-| 55 | bookcodingtest | dfsbfs | 경쟁적전염 | ✅ |  |  |  |
-| 56 | bookcodingtest | 그리디 | 만들수없는금액 | ✅ |  |  |  |
-| 57 | bookcodingtest | 최단경로 | 정확한순위 | ✅ |  |  |  |
-| 58 | bookcodingtest | 최단경로 | 미래도시 | ✅ |  |  |  |
-| 59 | bookcodingtest | 구현 | 외벽 | ✅ |  |  |  |
-| 60 | bookcodingtest | 정렬 | 카드정렬하기 | ✅ |  |  |  |
-| 61 | bookcodingtest | 최단경로 | 화성탐사 | ✅❗️ |  |  |  |
-| 62 | bookcodingtest | 이진탐색 | 공유기설치 | ✅ |  |  |  |
-| 63 | bookcodingtest | dfsbfs | 특정거리의도시찾기 | ✅ |  |  |  |
-| 64 | bookcodingtest | 이진탐색 | 고정점찾기 | ✅ |  |  |  |
-| 65 | bookcodingtest | dfsbfs | 미로탐색 | ✅ |  |  |  |
-| 66 | bookcodingtest | 최단경로 | 숨바꼭질 | ✅ |  |  |  |
-| 67 | bookcodingtest | 최단거리 | 플로이드 | ✅ |  |  |  |
-| 68 | bookcodingtest | 최단경로 | 전보 | ✅ |  |  |  |
-| 69 | bookcodingtest | 그래프 | 팀결성 | ✅ |  |  |  |
-| 70 | bookcodingtest | dfsbfs | 맥주마시면서걸어가기 | ✅ |  |  |  |
-| 71 | bookcodingtest | 그래프 | 도시분할계획 | ✅ |  |  |  |
-| 72 | bookcodingtest | dfsbfs | 괄호변환 | ✅ |  |  |  |
-| 73 | bookcodingtest | 정렬 | 실패율 | ✅ |  |  |  |
-| 74 | bookcodingtest | dfsbfs | 빙산 | ✅ |  |  |  |
-| 75 | bookcodingtest | 정렬 | 국영수 | ✅ |  |  |  |
-| 76 | bookcodingtest | 그래프 | 여행계획 | ✅ |  |  |  |
-| 77 | bookcodingtest | 그리디 | 문자열뒤집기 | ✅ |  |  |  |
-| 78 | bookcodingtest | 이진탐색 | 특정수개수 | ✅ |  |  |  |
-| 79 | bookcodingtest | 그래프 | 행성터널 | ✅ |  |  |  |
-| 80 | bookcodingtest | 그래프 | 커리큘럼 | ✅ |  |  |  |
-| 81 | bookcodingtest | dfsbfs | 연산자끼워넣기 | ✅ |  |  |  |
-| 82 | bookcodingtest | 그리디 | 곱하기혹은더하기 | ✅ |  |  |  |
-| 83 | bookcodingtest | 구현 | 기둥과보설치 | ✅ |  |  |  |
-| 84 | bookcodingtest | 구현 | 문자열재정렬 | ✅ |  |  |  |
-| 85 | bookcodingtest | 정렬 | 안테나 | ✅ |  |  |  |
-| 86 | bookcodingtest | 그래프 | 탑승구 | ✅ |  |  |  |
-| 87 | bookcodingtest | 구현 | 뱀 | ✅ |  |  |  |
-| 88 | bookcodingtest | 그래프 | 어두운길 | ✅ |  |  |  |
-| 89 | bookcodingtest | 그래프 | 최종순위 | ✅❗️ |  |  |  |
-| 90 | bookcodingtest | 그리디 | 모험가 길드 | ✅❗️ |  |  |  |
-| 91 | bookcodingtest | dfsbfs | DFS와BFS | ✅ |  |  |  |
-| 92 | bookcodingtest | 구현 | 치킨배달 | ✅ |  |  |  |
-| 93 | bookcodingtest | 구현 | 럭키스트레이트 | ✅ |  |  |  |
 
 
 
