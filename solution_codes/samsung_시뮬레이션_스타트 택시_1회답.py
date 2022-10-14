@@ -89,7 +89,6 @@ possible = True
 delivered = []  # 승객 시작위치를 넣음
 
 def activate(gas):
-    # breakpoint()
     tx, ty = sx, sy # 처음은 시작점
     while True:
         dist, pi = bfs(tx, ty) # 가까운 승객 찾아서 거리와 번호 반환

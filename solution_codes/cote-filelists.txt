@@ -194,3 +194,4 @@ samsung_시뮬레이션_주사위 윷놀이_1회답.py
 samsung_시뮬레이션_어른 상어_1회.py
 samsung_시뮬레이션_모노미노도미노 2_1회.py
 samsung_구현_어항 정리_1회.py
+samsung_시뮬레이션_컨베이어 벨트 위의 로봇_1회.py
