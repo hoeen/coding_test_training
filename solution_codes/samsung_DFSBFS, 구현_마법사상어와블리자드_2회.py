@@ -131,17 +131,6 @@ n, m = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(n)]
 skill = [list(map(int, input().split())) for _ in range(m)]
 
-# n, m = 7, 1
-# board = [ 
-# [0, 0, 0, 0, 0, 0, 0],
-# [3, 2, 1, 3, 2, 3, 0],
-# [2, 1, 2, 1, 2, 1, 0],
-# [2, 1, 1, 0, 2, 1, 1],
-# [3, 3, 2, 3, 2, 1, 2],
-# [3, 3, 3, 1, 3, 3, 2],
-# [2, 3, 2, 2, 3, 2, 3]
-# ]
-# skill = [[2,2]]
 
 # 먼저 queue 에 다 집어넣기
 queue = insert_queue()
@@ -169,7 +158,6 @@ for d, s in skill:
             break
 
     queue = change(queue)
-    # print('changed:')
-    # print(queue)
+
 
 print(marbles[1] + 2*marbles[2] + 3*marbles[3])
