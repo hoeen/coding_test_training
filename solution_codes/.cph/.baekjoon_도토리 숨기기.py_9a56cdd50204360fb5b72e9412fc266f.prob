@@ -1,0 +1,1 @@
+{"name":"Local: baekjoon_도토리 숨기기","url":"/Users/wooseokpark/github/coding_test/solution_codes/baekjoon_도토리 숨기기.py","tests":[{"id":1668145557756,"input":"200 2 5\n100 150 10\n110 150 15","output":"125"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/wooseokpark/github/coding_test/solution_codes/baekjoon_도토리 숨기기.py","group":"local","local":true}
