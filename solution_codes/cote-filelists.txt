@@ -198,3 +198,5 @@ samsung_시뮬레이션_컨베이어 벨트 위의 로봇_1회.py
 samsung_시뮬레이션_아기 상어_1회.py
 samsung_구현_나무박멸_1회.py
 samsung_DFSBFS, 구현_마법사상어와블리자드_2회.py
+baekjoon_이분탐색_도토리 숨기기_1회답.py
+baekjoon_백트래킹_소문난 칠공주_1회답.py
