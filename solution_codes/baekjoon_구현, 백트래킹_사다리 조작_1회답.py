@@ -1,6 +1,6 @@
 # ~6:30
-n, m, h = map(int, input().split())
-# n, m, h = 7, 1, 5
+# n, m, h = map(int, input().split())
+n, m, h = 7, 1, 5
 # n, m, h = 2, 1, 3
 # n, m, h = 10, 1, 30
 import time
@@ -38,10 +38,10 @@ def check(lines, startx, starty, count): # startx, starty 처음에 0,0
     if count == 3 or (0 < max_count <= count):
         return
 
-    time.sleep(1)
-    print('lines:')
-    for l in lines:
-        print(l)
+    # time.sleep(1)
+    # print('lines:')
+    # for l in lines:
+        # print(l)
 
     
 

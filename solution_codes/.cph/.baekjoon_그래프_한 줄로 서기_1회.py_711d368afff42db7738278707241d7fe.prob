@@ -1,0 +1,1 @@
+{"name":"Local: baekjoon_그래프_한 줄로 서기_1회","url":"/Users/wooseokpark/github/coding_test/solution_codes/baekjoon_그래프_한 줄로 서기_1회.py","tests":[{"id":1669905208974,"input":"4\n2 1 1 0","output":"4 2 1 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/wooseokpark/github/coding_test/solution_codes/baekjoon_그래프_한 줄로 서기_1회.py","group":"local","local":true}
