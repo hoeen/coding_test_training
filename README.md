@@ -59,6 +59,8 @@
 | 35 | baekjoon | 백트래킹 | 소문난 칠공주 | ✅❗️ |  |  |  |
 | 36 | baekjoon | 그래프 | 한 줄로 서기 | ✅ |  |  |  |
 | 37 | baekjoon | 그래프 | 택배 배송 | ✅ |  |  |  |
+| 38 | baekjoon | 최단거리 | 파티 | ✅ |  |  |  |
+| 39 | baekjoon | 브루트포스 | 하늘에서 별똥별이 빗발친다 | ✅ |  |  |  |
 
 
 
@@ -252,6 +254,17 @@
 | 14 | programmers | DP | N으로 표현 | ✅❗️ |  |  |  |
 | 15 | programmers | 그래프 | 순위 | ✅❗️ |  |  |  |
 | 16 | programmers | DP | 코딩테스트 연습 | ✅❗️ |  |  |  |
+| 17 | programmers | 스택, 큐 | 올바른 괄호 | ✅ |  |  |  |
+| 18 | programmers | 완전탐색 | 피로도 | ✅ |  |  |  |
+| 19 | programmers | 스택, 큐 | 같은 숫자는 싫어 | ✅ |  |  |  |
+| 20 | programmers | 스택, 큐 | 기능개발 | ✅ |  |  |  |
+| 21 | programmers | 완전탐색 | 최소직사각형 | ✅ |  |  |  |
+| 22 | programmers | 스택, 큐 | 프린터 | ✅ |  |  |  |
+| 23 | programmers | 완전탐색 | 모의고사 | ✅ |  |  |  |
+| 24 | programmers | 힙 | 이중우선순위큐 | ✅❗️ |  |  |  |
+| 25 | programmers | 완전탐색 | 카펫 | ✅ |  |  |  |
+| 26 | programmers | 완전탐색 | 소수 찾기 | ✅ |  |  |  |
+| 27 | programmers | 힙 | 더 맵게 | ✅ |  |  |  |
 
 ## SQL 문제
 | 순번 | 구분 | 유형 | 문제 | 1회 풀이 | 2회 풀이 | 3회 풀이 | 풀이 코드 |

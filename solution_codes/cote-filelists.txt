@@ -205,3 +205,16 @@ programmers_DP_코딩테스트 연습_1회답.py
 baekjoon_그래프_한 줄로 서기_1회.py
 baekjoon_구현_한 줄로 서기_1회.py
 baekjoon_그래프_택배 배송_1회.py
+programmers_스택, 큐_올바른 괄호_1회.py
+programmers_완전탐색_피로도_1회.py
+programmers_스택, 큐_같은 숫자는 싫어_1회.py
+programmers_스택, 큐_기능개발_1회.py
+programmers_완전탐색_최소직사각형_1회.py
+programmers_스택, 큐_프린터_1회.py
+baekjoon_최단거리_파티_1회.py
+programmers_완전탐색_모의고사_1회.py
+baekjoon_브루트포스_하늘에서 별똥별이 빗발친다_1회.py
+programmers_힙_이중우선순위큐_1회답.py
+programmers_완전탐색_카펫_1회.py
+programmers_완전탐색_소수 찾기_1회.py
+programmers_힙_더 맵게_1회.py
