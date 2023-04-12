@@ -31,7 +31,7 @@ with open('cote-filelists.txt', 'r') as f:
 
 
 files = []
-for _, _, filenames in os.walk('.'):
+for _, _, filenames in os.walk('./'):
     for filename in filenames:
         if '_' in filename and (filename.endswith('py') or filename.endswith('sql')):
             files.append(filename)
