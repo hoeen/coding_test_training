@@ -248,7 +248,7 @@
 | 2 | programmers | BFS | 게임 맵 최단거리 | ✅❗️ |  |  |  |
 | 3 | programmers | 해시 | 오픈채팅방 | ✅ |  |  |  |
 | 4 | programmers | 구현, 수학 | 교점에 별 만들기 | ✅ |  |  |  |
-| 5 | programmers | 이분탐색 | 입국심사 | ✅ |  |  |  |
+| 5 | programmers | 이분탐색 | 입국심사 | ✅ | ✅ |  |  |
 | 6 | programmers | 그래프, 다익스트라 | 가장 먼 노드 | ✅❗️ | ✅ |  |  |
 | 7 | programmers | 스택, 큐 | 짝지어 제거하기 | ✅ |  |  |  |
 | 8 | programmers | 큐, 구현 | 행렬 테두리 회전하기 | ✅ |  |  |  |
