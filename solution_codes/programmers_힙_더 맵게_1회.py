@@ -17,4 +17,3 @@ def solution(scoville, K):
         mix = dish1 + (dish2*2)
         heappush(scoville, mix)
         count += 1
-    
