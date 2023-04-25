@@ -236,3 +236,5 @@ baekjoon_DP_색상환_1회답.py
 baekjoon_최단거리_파티_2회.py
 programmers_그래프_합승 택시 요금_1회.py
 programmers_BFS_리코쳇 로봇_1회답.py
+baekjoon_시뮬레이션_킹_1회.py
+programmers_BFS_내리막길_1회답.py

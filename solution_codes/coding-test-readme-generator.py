@@ -38,7 +38,7 @@ for _, _, filenames in os.walk('./'):
 
 
 diff_files = list(set(files) - set(before_filelist))
-
+print(diff_files)
 
 # README 파일 모든 줄 리스트화
 readme_list = []
