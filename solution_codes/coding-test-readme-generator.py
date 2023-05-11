@@ -64,7 +64,7 @@ def readme_list_insert(dfiles):
         #### 입력 파일 파악 #################################
         # '_' 로 구분지어 리스트화  - [구분, 유형, 이름, 회차]
         # if len(new_file[:-3].split('_')) < 5:
-        ref, type, name, trial = new_file[:-3].split('_')[:4]
+        ref, type, name, trial = new_file.split('.')[0].split('_')[:4]
         # elif len(new_file[:-3].split('_')) == 5:   # 참고 항목이 뒤에 있을때
         #     ref, type, name, trial, cf = new_file[:-3].split('_')
         
