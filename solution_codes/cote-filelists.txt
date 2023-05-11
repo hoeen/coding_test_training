@@ -238,3 +238,10 @@ programmers_그래프_합승 택시 요금_1회.py
 programmers_BFS_리코쳇 로봇_1회답.py
 baekjoon_시뮬레이션_킹_1회.py
 programmers_BFS_내리막길_1회답.py
+baekjoon_BFS_상범 빌딩_1회.py
+programmers_카운터_시소 짝꿍_1회답.py
+programmers_그래프_게임 개발_1회답.py
+baekjoon_DP_방 번호_1회답.py
+baekjoon_투포인터_두 용액_2회.py
+sql_STRING_조회수가 가장 많은 중고거래 게시판의 첨부파일 조회하기_1회답.sql
+sql_STRING_조건에 맞는 사용자 정보 조회하기_1회답.sql
